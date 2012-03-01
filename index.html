@@ -1,0 +1,172 @@
+<!doctype html>  
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Hidden Gems in Browser Tools</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	<body>
+		
+		<div id="reveal">
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Hidden Gems in Browser Tools</h1>
+					<h3 class="inverted">Adam Tuttle</h3>
+					<h4 class="inverted">For cf.Objective() 2012</h4>
+				</section>
+				
+				<section>
+					<h2>About Me</h2>
+					<br/>
+					<ul>
+						<li>Manager of <a href="http://www.phillycfug.org">Philly CFUG</a> 2009-Present</li>
+						<li>ColdFusion ACP 2010-Present</li>
+						<li>Work for CounterMarch Systems, near Philadelphia</li>
+						<li>Blog at <a href="http://fusiongrokker.com">fusiongrokker.com</a></li>
+						<li>Author of <a href="http://github.com/atuttle/Taffy">Taffy</a> & numerous popular Mango Blog plugins</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Atwood's Law</h2>
+					<br/>
+					<blockquote>Any application that can be written in JavaScript, will eventually be written in JavaScript.</blockquote>
+					<p>&mdash;Jeff Atwood, <a href="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html">The Principle of Least Power</a></p>
+				</section>
+
+				<section>
+					<h2>JavaScript... Really?!</h2>
+					<br/>
+					<p>The year that JS was invented ...</p>
+					<ul>
+						<li>Bill Clinton was POTUS</li>
+						<li><em>"Star Trek: Voyager"</em> debuted</li>
+						<li><em>"Full House"</em> ended</li>
+						<li class="fragment"><strong>ColdFusion 1.0 was released</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>We've both come a long way since 1995</h2>
+					<ul>
+						<li><a href="http://www.badassjs.com">BadassJS.com</a> - news site following its namesake</li>
+						<li><a href="http://www.js1k.com">js1k.com</a> - competitions for badassery in &lt;= 1K of JS code</li>
+						<li>Insane bookmarklets! (<a href="http://kathack.com/">Katamari</a>) (<a href="http://erkie.github.com/">Asteroids!</a>)</li>
+						<li><a href="http://mrdoob.com/projects/chromeexperiments/google_gravity/">Google Gravity</a></li>
+						<li>GMail, Facebook, Twitter, Google+, etc</li>
+						<li>ChromeOS is an OS that is nothing but a web browser</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>We're Living in the Future</h2>
+					<br/>
+					<ul>
+						<li>JavaScript is getting more complex</li>
+						<li>CSS is getting more complex</li>
+					</ul>
+					<br/>
+					<br/>
+					<p>... But debugging difficulty is related to complexity.</p>
+				</section>
+
+				<section>
+					<h2>Alerts Anonymous</h2>
+					<br/>
+					<pre><code contenteditable>alert(foo);</code></pre>
+					<br/>
+					<p>There must be a better way!</p>
+				</section>
+
+				<section>
+					<h2>Fear Not, we have tools!</h2>
+					<br/>
+					<ul>
+						<li>Chrome: Developer Tools</li>
+						<li>Firefox: FireBug (+ Plugins)</li>
+						<li>Internet Explorer: Developer Toolbar</li>
+						<li>Opera: Dragonfly *</li>
+						<li>Safari: Developer Tools *</li>
+					</ul>
+					<br/>
+					<br/>
+					<p><small>* Not covered here in great detail</small></p>
+				</section>
+
+				<section>
+
+					<script type="text/javascript">var foo = { bar: 'indeed!', some_array: [1,2,3,'four'], fubar: { child: true }};</script>
+
+					<section>
+						<h2>Hidden Gems</h2>
+						<br/>
+						<p>Pre-requisite: Everyone knows about console.log, right?</p>
+						<br/>
+						<pre><code contenteditable>console.log(foo);</code></pre>
+					</section>
+
+					<section>
+						<h2>Console &raquo; Console Everywhere!</h2>
+						<p>In any tab other than the console, hit <kbd>Esc</kbd> to open a mini-console.</p>
+						<!-- TODO: icons for browser compatability -->
+					</section>
+
+				</section>
+
+				<section>
+					<h2>The End</h2>
+					<h3 class="inverted">Adam Tuttle fusiongrokker.com</h3>
+					<p>Inspired by: <a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></p>
+					<p>Presentation online at: <a href="http://github.com/atuttle/Getting_REST_preso">http://github.com/atuttle/Getting_REST_preso</a>
+				</section>
+
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="js/reveal.js"></script>
+		<script src="lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: false,
+
+				// Display a presentation progress bar
+				progress: false,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'cube' // default/cube/page/concave/linear(2d),
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		
+	</body>
+</html>
