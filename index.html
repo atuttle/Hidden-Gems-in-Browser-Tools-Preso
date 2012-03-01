@@ -1,3 +1,6 @@
+<!-- TODO: 
+	icons for browser compatability
+-->
 <!doctype html>  
 <html lang="en">
 	<head>
@@ -7,6 +10,7 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="lib/zenburn.css">
+		<script type="text/javascript">var foo = { bar: 'indeed!', some_array: [1,2,3,'four'], fubar: { child: true }};</script>
 	</head>
 	<body>
 		
@@ -55,11 +59,11 @@
 					<h2>We've both come a long way since 1995</h2>
 					<ul>
 						<li><a href="http://www.badassjs.com">BadassJS.com</a> - news site following its namesake</li>
-						<li><a href="http://www.js1k.com">js1k.com</a> - competitions for badassery in &lt;= 1K of JS code</li>
+						<li><a href="http://www.js1k.com">js1k.com</a> - badassery in &lt;= 1K of JS code</li>
 						<li>Insane bookmarklets! (<a href="http://kathack.com/">Katamari</a>) (<a href="http://erkie.github.com/">Asteroids!</a>)</li>
 						<li><a href="http://mrdoob.com/projects/chromeexperiments/google_gravity/">Google Gravity</a></li>
 						<li>GMail, Facebook, Twitter, Google+, etc</li>
-						<li>ChromeOS is an OS that is nothing but a web browser</li>
+						<li>ChromeOS is just a web browser</li>
 					</ul>
 				</section>
 
@@ -100,10 +104,8 @@
 
 				<section>
 
-					<script type="text/javascript">var foo = { bar: 'indeed!', some_array: [1,2,3,'four'], fubar: { child: true }};</script>
-
 					<section>
-						<h2>Hidden Gems</h2>
+						<h2>Hidden Gems &raquo; Console</h2>
 						<br/>
 						<p>Pre-requisite: Everyone knows about console.log, right?</p>
 						<br/>
@@ -111,16 +113,65 @@
 					</section>
 
 					<section>
-						<h2>Console &raquo; Console Everywhere!</h2>
-						<p>In any tab other than the console, hit <kbd>Esc</kbd> to open a mini-console.</p>
-						<!-- TODO: icons for browser compatability -->
+						<h2>Console &raquo; Everywhere!</h2>
+						<p>In any tab other than the console, hit <kbd>Esc</kbd> to open a mini-console. (Chrome, Safari)</p>
 					</section>
 
+					<section>
+						<h2>Console &raquo; Labels!</h2>
+						<p><code>console.log()</code> takes multiple arguments. Label your debug output! (All)</p>
+						<br/>
+						<pre><code contenteditable>console.log('foo:', foo);
+
+//also handy!
+console.info('info:', foo);
+console.warn('warn:', foo);
+console.error('error:', foo);
+console.assert(false, 'my assertion');</code></pre>
+					</section>
+
+					<section>
+						<h2>Console &raquo; KB Shortcuts</h2>
+						<p>Up + Down arrow keys scroll through command history</p>
+					</section>
+
+					<section>
+						<h2>Console &raquo; Settings</h2>
+						<p>Persist contents after redirect</p>
+						<ul>
+							<li>Chrome: Right-click in console</li>
+							<li>Firefox: Button in console toolbar</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Console &raquo; Dealing w/ Frames</h2>
+						<ul>
+							<li>Chrome: Dropdown</li>
+							<li>Firefox:</li>
+						</ul>
+						<pre><code contenteditable>cd(window.frames['frameName']);</code></pre>
+					</section>
+
+					<section>
+						<h2>Console &raquo; Copy to Clipboard</h2>
+						<p>Copy the result of a console command to the clipboard: (Chrome, FF, Safari)</p>
+						<br/>
+						<pre><code contenteditable>copy('I\'m in ur clipboard, pastin ur text!');</code></pre>
+					</section>
+
+					<section>
+						<h2>Console &raquo; Math</h2>
+						<p>Just type in your math problem and get the answer:</p>
+						<br/>
+						<pre><code contenteditable>Math.sqrt(1787569);</code></pre>
+					</section>
+					
 				</section>
 
 				<section>
 					<h2>The End</h2>
-					<h3 class="inverted">Adam Tuttle fusiongrokker.com</h3>
+					<h3 class="inverted">Adam Tuttle<br/>fusiongrokker.com</h3>
 					<p>Inspired by: <a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></p>
 					<p>Presentation online at: <a href="http://github.com/atuttle/Getting_REST_preso">http://github.com/atuttle/Getting_REST_preso</a>
 				</section>
@@ -159,7 +210,7 @@
 				rollingLinks: true,
 
 				// UI style
-				theme: query.theme || 'default', // default/neon
+				theme: query.theme || 'neon', // default/neon
 
 				// Transition style
 				transition: query.transition || 'cube' // default/cube/page/concave/linear(2d),
