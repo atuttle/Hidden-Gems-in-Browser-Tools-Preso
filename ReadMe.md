@@ -2,7 +2,8 @@
 
 This repo is a presentation (web-based slide deck) that I prepared for [cf.Objective 2012](http://www.cfobjective.com/speakers/adam-tuttle/) (May 2012).
 
-Heavily inspired by: http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/
+* Uses [Reveal.js](https://github.com/hakimel/reveal.js)
+* Heavily inspired by: http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/
 
 ## LICENSE
 
