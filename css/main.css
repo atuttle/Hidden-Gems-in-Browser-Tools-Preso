@@ -41,7 +41,7 @@ html, body {
 }
 
 html {
-	background: #555a5f;
+	background: #1c1e20;
 	background: -moz-radial-gradient(center, ellipse cover, #555a5f 0%, #1c1e20 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#555a5f), color-stop(100%,#1c1e20));
 	background: -webkit-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%);
@@ -246,7 +246,7 @@ html {
 	        transition: all .2s linear;
 }
 
-	#reveal a.image:hover img {
+	#reveal a:hover img {
 		background: rgba(255,255,255,0.2);
 		border-color: #13DAEC;
 		
@@ -314,7 +314,7 @@ html {
 #reveal .progress {
 	position: fixed;
 	display: none;
-	height: 4px;
+	height: 3px;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -603,6 +603,11 @@ html {
 
 #reveal.cube .slides section {
 	padding: 30px;
+
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	    -ms-backface-visibility: hidden;
+	        backface-visibility: hidden;
 	
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -873,3 +878,21 @@ html {
 }
 
 
+/*********************************************
+ * FALLBACK
+ *********************************************/
+
+.no-transforms {
+	overflow-y: auto;
+}
+
+.no-transforms .slides section {
+	-webkit-transform: none;
+	   -moz-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	
+	display: block!important;
+	opacity: 1!important;
+	position: relative!important;
+}
