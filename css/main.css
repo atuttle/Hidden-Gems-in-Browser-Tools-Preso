@@ -290,6 +290,7 @@ html {
 
 	#reveal .controls .left {
 		top: 30px;
+		right: 70px;
 	}
 
 	#reveal .controls .right {
