@@ -257,6 +257,26 @@ html {
 		        box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 	}
 
+.compat_icons img {
+	background: none !important;
+	border: 0 !important;
+	margin: 0 !important;
+	-webkit-box-shadow: none !important;
+	   -moz-box-shadow: none !important;
+	     -o-box-shadow: none !important;
+			box-shadow: none !important;
+}
+
+kbd {
+	padding: 0px 4px;
+	white-space: nowrap;
+	color: black;
+	background: #EEE;
+	border-width: 1px 3px 3px 1px;
+	border-style: solid;
+	border-color: #CCC #AAA #888 #BBB;
+	font-size: 80%;
+}
 
 /*********************************************
  * CONTROLS
