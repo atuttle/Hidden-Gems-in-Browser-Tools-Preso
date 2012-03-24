@@ -1,21 +1,24 @@
-<!-- TODO: 
-	icons for browser compatability
--->
-<!doctype html>  
+<!doctype html>
 <html lang="en">
 	<head>
+		<base target="_blank">
 		<meta charset="utf-8">
 		<title>Hidden Gems in Browser Tools</title>
 		<link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700|Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="lib/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- shadowbox -->
+		<link rel="stylesheet" href="js/lightbox/css/prettyPhoto.css">
+
 		<script type="text/javascript">var foo = { bar: 'indeed!', some_array: [1,2,3,'four'], fubar: { child: true }};</script>
 	</head>
 	<body>
-		
+
 		<div id="reveal">
-			
+
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
@@ -23,7 +26,7 @@
 					<h3 class="inverted">Adam Tuttle</h3>
 					<h4 class="inverted">For cf.Objective() 2012</h4>
 				</section>
-				
+
 				<section>
 					<h2>About Me</h2>
 					<br/>
@@ -42,7 +45,7 @@
 					<h2>Atwood's Law</h2>
 					<br/>
 					<blockquote>Any application that can be written in JavaScript, will eventually be written in JavaScript.</blockquote>
-					<p>&mdash;Jeff Atwood, <a href="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html">The Principle of Least Power</a></p>
+					<p>&mdash;Jeff Atwood, in <a href="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html">The Principle of Least Power</a></p>
 				</section>
 
 				<section>
@@ -74,8 +77,8 @@
 					<h2>We're Living in the Future</h2>
 					<br/>
 					<ul>
-						<li>JavaScript is getting more powerful (complex)</li>
-						<li>CSS is getting more powerful (complex)</li>
+						<li>JavaScript is getting more "powerful" (complex)</li>
+						<li>CSS is getting more "powerful" (complex)</li>
 						<li>Desktop apps are moving to the browser</li>
 					</ul>
 					<br/>
@@ -96,7 +99,7 @@
 				<section>
 					<h2>Tools to the Rescue!</h2>
 					<br/>
-					<ul>
+					<ul class="noDots">
 						<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Developer Tools</li>
 						<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> FireBug (+ Plugins)</li>
 						<li><span class="compat_icons"><img src="assets/images/ie9_small.png" /></span> Developer Toolbar</li>
@@ -128,7 +131,7 @@
 					</section>
 
 					<section>
-						<h2>Console &raquo; Everywhere!</h2>
+						<h2><small>Console &raquo;</small><br/>Console Everywhere!</h2>
 						<br/>
 						<p>In any tab other than the console,<br/>
 							hit <kbd>Esc</kbd> to open a mini-console.</p>
@@ -139,11 +142,9 @@
 					</section>
 
 					<section>
-						<h2>Console &raquo; Labels!</h2>
+						<h2><small>Console &raquo;</small><br/> Log Labels!</h2>
 						<p><code>console.log()</code> takes multiple arguments.<br/>Label your debug output!</p>
-						<br/>
 						<pre><code contenteditable>console.log('foo:', foo);
-
 //also handy!
 console.info('info:', foo);
 console.warn('warn:', foo);
@@ -159,7 +160,7 @@ console.assert(false, 'my assertion');</code></pre>
 					</section>
 
 					<section>
-						<h2>Console &raquo; KB Shortcuts</h2>
+						<h2><small>Console &raquo;</small><br/> KB Shortcuts</h2>
 						<br/>
 						<p><kbd>&#11014;</kbd> + <kbd>&#11015;</kbd> arrow keys scroll through command history</p>
 						<br/>
@@ -173,32 +174,40 @@ console.assert(false, 'my assertion');</code></pre>
 					</section>
 
 					<section>
-						<h2>Console &raquo; Settings</h2>
+						<h2><small>Console &raquo;</small><br/> Settings</h2>
 						<br/>
 						<p>Persist contents after redirect</p>
 						<br/>
-						<ul>
-							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Right-click in console</li>
-							<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> Button in console toolbar</li>
+						<ul class="noDots">
+							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Right-click in console
+								<a href="img/chrome_persist_after_redirect.png" rel="prettyPhoto[persist]">&#9114;</a>
+							</li>
+							<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> Button in console toolbar
+								<a href="img/firebug_persist_after_redirect.png" rel="prettyPhoto[persist]">&#9114;</a>
+							</li>
 						</ul>
 					</section>
 
 					<section>
-						<h2>Console &raquo; Dealing w/ Frames</h2>
+						<h2><small>Console &raquo;</small><br/> Dealing w/ Frames</h2>
 						<br/>
-						<ul>
-							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Dropdown</li>
+						<ul class="noDots">
+							<p>The console can only interact with one page. If you've got a frameset or iframe to deal with, it can feel troublesome.</p>
+							<br/>
+							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Dropdown
+								<a href="img/chrome_frame_select.png" rel="prettyPhoto">&#9114;</a>
+							</li>
 							<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> Change console context:</li>
 						</ul>
 						<pre><code contenteditable>cd(window.frames['frameName']);</code></pre>
 					</section>
 
 					<section>
-						<h2>Console &raquo; Copy to Clipboard</h2>
+						<h2><small>Console &raquo;</small><br/>Copy to Clipboard</h2>
 						<br/>
 						<p>Copy the result of a console command to the clipboard:</p>
 						<br/>
-						<pre><code contenteditable>copy('I\'m in ur clipboard, pastin ur text!');</code></pre>
+						<pre><code contenteditable>copy("I'm in ur clipboard, copyin ur text!");</code></pre>
 						<p class="compat_icons">
 							<img src="assets/images/chrome_small.png" />
 							<img src="assets/images/firefox_small.png" />
@@ -207,7 +216,7 @@ console.assert(false, 'my assertion');</code></pre>
 					</section>
 
 					<section>
-						<h2>Console &raquo; Math</h2>
+						<h2><small>Console &raquo;</small><br/> Math</h2>
 						<br/>
 						<p>Just type in your math problem and get the answer:</p>
 						<br/>
@@ -220,17 +229,22 @@ console.assert(false, 'my assertion');</code></pre>
 							<img src="assets/images/ie9_small.png" />
 						</p>
 					</section>
-					
+
 				</section>
 
 				<section>
 
 					<section>
 						<h2>Hidden Gems &raquo; Scripts</h2>
+						<p>
+							<img src="img/script.jpg" />
+							<br/>
+							<small><a href="http://www.flickr.com/photos/inthehandofdante/3917397900">credit</a></small>
+						</p>
 					</section>
 
 					<section>
-						<h2>Scripts &raquo; Step Debugger</h2>
+						<h2><small>Scripts &raquo;</small><br/> Step Debugger</h2>
 						<ul>
 							<li>Breakpoints
 								<p class="compat_icons">
@@ -260,20 +274,28 @@ console.assert(false, 'my assertion');</code></pre>
 					</section>
 
 					<section>
-						<h2>Scripts &raquo; Un-minify</h2>
+						<h2><small>Scripts &raquo;</small><br/> Step Debugger</h2>
+						<p>Keyboard Shortcuts:</p>
 						<ul>
-							<li>Chrome & Safari: { } icon</li>
-							<li>IE9: Tools icon &gt; Format JavaScript</li>
+							<li><kbd>F8</kbd> Pause/Continue ("Run")</li>
+							<li><kbd>F10</kbd> Step Over</li>
+							<li><kbd>F11</kbd> Step Into</li>
 						</ul>
-						<p class="compat_icons">
-							<img src="assets/images/chrome_small.png" />
-							<img src="assets/images/safari_small.png" />
-							<img src="assets/images/ie9_small.png" />
-						</p>
+						<br/><br/>
+						<p>&#63743;: <kbd>&#8984;</kbd><kbd>/</kbd>, <kbd>&#8984;</kbd><kbd>'</kbd>, <kbd>&#8984;</kbd><kbd>;</kbd> respectively</p>
+
 					</section>
 
 					<section>
-						<h2>Scripts &raquo; "Watch" variables</h2>
+						<h2><small>Scripts &raquo;</small><br/> Un-minify</h2>
+						<ul class="noDots">
+							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /><img src="assets/images/safari_small.png" /></span> { } button</li>
+							<li><span class="compat_icons"><img src="assets/images/ie9_small.png" /></span> Tools icon &gt; Format JavaScript</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2><small>Scripts &raquo;</small><br/> Variable "Watches"</h2>
 						<p>Auto-updating value list for specified variables</p>
 						<p class="compat_icons">
 							<img src="assets/images/chrome_small.png" />
@@ -289,47 +311,120 @@ console.assert(false, 'my assertion');</code></pre>
 				<section>
 
 					<section>
-						<h2>Hidden Gems &raquo; Elements/ HTML/ Documents</h2>
+						<h2>Hidden Gems &raquo; Elements / HTML / Documents</h2>
 						<br/>
 						<p>... because apparently we can't even agree on a standard for tab names.</p>
 					</section>
 
 					<section>
-						<h2>HTML &raquo; Element Dimensions</h2>
+						<h2><small>HTML &raquo;</small><br/> Element Dimensions</h2>
 						<br/>
-						<ul>
-							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /> <img src="assets/images/safari_small.png" /></span> Select the element to see its dimensions, or use the magnifying glass icon in bottom toolbar</li>
+						<ul class="noDots">
+							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /> <img src="assets/images/safari_small.png" /></span> Select the element to see its dimensions, or use the magnifying glass icon in bottom toolbar<br/><br/></li>
 							<li><span class="compat_icons"> <img src="assets/images/firefox_small.png" /> <img src="assets/images/ie9_small.png" /> <img src="assets/images/opera_small.png" /></span> Layout tab or list of computed styles</li>
 						</ul>
 					</section>
 
 					<section>
-						<h2>HTML &raquo; Expand HTML</h2>
-						<ul>
-							<li><span class="compat_icons"> <img src="assets/images/firefox_small.png" /></span> * key on numpad expands everything but scripts & stylesheets. Add shift to include those.</li>
-							<li><span class="compat_icons"> <img src="assets/images/opera_small.png" /></span> Button on documents tab</li>
+						<h2><small>HTML &raquo;</small><br/> Expand HTML</h2>
+						<ul class="noDots">
+							<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> <kbd>&nbsp;* </kbd> &nbsp;on numpad expands everything but scripts & stylesheets. Add shift to include those.<br/><br/></li>
+							<li><span class="compat_icons"><img src="assets/images/opera_small.png" /></span> Button on documents tab</li>
 						</ul>
 					</section>
 
 					<section>
-						<h2>HTML &raquo; Incrementing Numeric Property Values</h2>
-						<p>(All) Up/Down change by 1</p>
-						<p>Chrome, Firefox, Safari: Shift 10</p>
-						<p>Chrome, Safari: Alt 0.1</p>
-						<p>Chrome, Safari: Shift+PgUp/PgDn 100</p>
+						<h2><small>HTML &raquo;</small><br/> Incrementing Numeric Prop Vals</h2>
+
+						<ul class="noDots">
+							<li>
+								<span class="compat_icons">
+									<img src="assets/images/chrome_small.png" />
+									<img src="assets/images/firefox_small.png" />
+									<img src="assets/images/safari_small.png" />
+									<img src="assets/images/opera_small.png" />
+									<img src="assets/images/ie9_small.png" />
+								</span>
+								<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 1
+							</li>
+							<li>
+								<span class="compat_icons">
+									<img src="assets/images/chrome_small.png" />
+									<img src="assets/images/firefox_small.png" />
+									<img src="assets/images/safari_small.png" />
+									<img src="assets/images/opera_small.png" style="visibility:hidden" />
+									<img src="assets/images/ie9_small.png" style="visibility:hidden" />
+								</span>
+
+
+								<kbd>Shift</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 10
+							</li>
+							<li>
+								<span class="compat_icons">
+									<img src="assets/images/chrome_small.png" />
+									<img src="assets/images/firefox_small.png" style="visibility:hidden" />
+									<img src="assets/images/safari_small.png" />
+									<img src="assets/images/opera_small.png" style="visibility:hidden" />
+									<img src="assets/images/ie9_small.png" style="visibility:hidden" />
+								</span>
+								<kbd>Alt</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 0.1
+							</li>
+							<li>
+								<span class="compat_icons">
+									<img src="assets/images/chrome_small.png" />
+									<img src="assets/images/firefox_small.png" style="visibility:hidden" />
+									<img src="assets/images/safari_small.png" />
+									<img src="assets/images/opera_small.png" style="visibility:hidden" />
+									<img src="assets/images/ie9_small.png" style="visibility:hidden" />
+								</span>
+								<kbd>Shift</kbd>+<kbd>PgUp</kbd>/<kbd>PgDn</kbd> change by 100
+								<br/><br/>
+							</li>
+							<li>
+								<span class="compat_icons">
+									<img src="assets/images/chrome_small.png" />
+									<img src="assets/images/firefox_small.png" style="visibility:hidden" />
+									<img src="assets/images/safari_small.png" />
+									<img src="assets/images/opera_small.png" />
+									<img src="assets/images/ie9_small.png" style="visibility:hidden" />
+								</span>
+								Also works on colors (Bonus!)
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2><small>HTML &raquo;</small><br/> Element State</h2>
 						<br/>
-						<p>Bonus: Chrome, Safari, Opera: Also works on colors</p>
-					</section>
-
-					<section>
-						<h2>HTML &raquo; Element State</h2>
 						<p>Preview focused, hover, active, visited states</p>
+						<p class="compat_icons">
+							<img src="assets/images/chrome_small.png" />
+							<img src="assets/images/firefox_small.png" />
+							<img src="assets/images/opera_small.png" />
+						</p>
+						<br/>
+						<p>
+							Screen Shots:
+							<a href="img/chrome_state_toggle.png" rel="prettyPhoto">chrome</a>,
+							<a href="img/firebug_state_toggle.png" rel="prettyPhoto">firebug</a>
+						</p>
 					</section>
 
 					<section>
-						<h2>HTML &raquo; Color definition mode</h2>
-						<p>Chrome, Safari: Clicking the color swatch toggles between hex, rgb, hsl, named, etc.</p>
-						<p>Opera: This brings up a color selection dialog</p>
+						<h2><small>HTML &raquo;</small><br/> Color definition mode</h2>
+						<p>
+							<span class="compat_icons">
+								<img src="assets/images/chrome_small.png" />
+								<img src="assets/images/safari_small.png" />
+							</span>
+							Clicking color swatches: toggle between hex, short hex, RGB, HSL, named, etc.
+						</p>
+						<p>
+							<span class="compat_icons">
+								<img src="assets/images/opera_small.png" />
+							</span>
+							This brings up a color selection dialog
+						</p>
 					</section>
 
 				</section>
@@ -340,19 +435,40 @@ console.assert(false, 'my assertion');</code></pre>
 						<h2>Hidden Gems &raquo; Resources</h2>
 						<br/>
 						<p>Lists stylesheets, scripts, images, etc used on the page</p>
-						<p>Firefox & IE don't have a resources tab but some functionality is implemented in other tabs</p>
+						<br/>
+						<p>Firefox & IE don't have a "Resources" tab but some functionality is implemented in other tabs</p>
 					</section>
 
 					<section>
-						<h2>Resources &raquo; Save changes</h2>
-						<p>Chrome: right click, save as</p>
-						<p>Safari: Copy + Paste</p>
+						<h2><small>Resources &raquo;</small><br/> Save changes</h2>
+						<p>
+							<span class="compat_icons">
+								<img src="assets/images/chrome_small.png" />
+							</span>
+							Right click, Save as
+						</p>
+						<p>
+							<span class="compat_icons">
+								<img src="assets/images/safari_small.png" />
+							</span>
+							Copy + Paste
+						</p>
 					</section>
 
 					<section>
-						<h2>Resources &raquo; Cookies & Storage</h2>
-						<p>Chrome: Resources tab also shows local storage, cookies, caches, etc., and data stored in them<p>
-						<p>Opera: Storage tab does same thing</p>
+						<h2><small>Resources &raquo;</small><br/> Cookies & Storage</h2>
+						<p>
+							<span class="compat_icons">
+								<img src="assets/images/chrome_small.png" />
+							</span>
+							Resources tab also shows local storage, cookies, caches, etc.
+						<p>
+						<p>
+							<span class="compat_icons">
+								<img src="assets/images/opera_small.png" />
+							</span>
+							Storage tab does same thing
+						</p>
 					</section>
 
 				</section>
@@ -362,40 +478,60 @@ console.assert(false, 'my assertion');</code></pre>
 					<section>
 						<h2>Hidden Gems &raquo; Network</h2>
 						<br/>
-						<p>Usually needs to be open to work, you may have to refresh</p>
+						<p>Usually needs to be open to work; may require refresh to populate</p>
 					</section>
 
 					<section>
-						<h2>Network &raquo; Disable cache</h2>
-						<p>Chrome: Settings cog</p>
-						<p>Firefox: Tab menu</p>
-						<p>IE9: under "cache" in menu bar</p>
-						<p>Safari: Develop menu &gt; disable cache</p>
-						<p>Opera: can't disable, can only clear</p>
-						<br/>
-						<p>All: Ctrl/Cmd + Shift + Delete: Clear cache & other data dialog</p>
+						<h2><small>Network &raquo;</small><br/> Disable cache</h2>
+						<ul class="noDots">
+							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Settings cog</li>
+							<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> Tab menu</li>
+							<li><span class="compat_icons"><img src="assets/images/ie9_small.png" /></span> Under "cache" in menu bar</li>
+							<li><span class="compat_icons"><img src="assets/images/safari_small.png" /></span> Develop Menu &gt; Disable Cache</li>
+							<li><span class="compat_icons"><img src="assets/images/opera_small.png" /></span> Can't disable; only clear</li>
+						</ul>
+						<br/><br/>
+						<p>All: <kbd>Ctrl</kbd>/<kbd>&#8984;</kbd>+<kbd>Shift</kbd>+<kbd>Del</kbd> Clear cache (& other data) dialog</p>
 					</section>
 
 					<section>
-						<h2>Network &raquo; Spoof User-Agent</h2>
-						<p>Chrome: settings cog (Just graduated from dev channel to stable in February)</p>
-						<p>Firefox: User-Agent Switcher extension</p>
+						<h2><small>Network &raquo;</small><br/> Spoof User-Agent</h2>
+						<ul class="noDots">
+							<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Settings cog (as of February)</li>
+							<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> User-Agent Switcher (extension)</li>
+						</ul>
 					</section>
 
 					<section>
-						<h2>Network &raquo; Latency</h2>
-						<p>Displays are all slightly different but they all show wait time, download time, etc for each external resource</p>
+						<h2><small>Network &raquo;</small><br/> Latency</h2>
+						<p>Displays are all slightly different but all show wait time, download time, etc for each external resource</p>
 					</section>
 
 					<section>
-						<h2>Network &raquo; Events</h2>
+						<h2><small>Network &raquo;</small><br/> Events</h2>
 						<ul>
 							<li>DomContentLoaded</li>
 							<li>Load (images, subframes, etc)</li>
 						</ul>
-						<p>Chrome, Safari</p>
+						<p class="compat_icons">
+							<img src="assets/images/chrome_small.png" />
+							<img src="assets/images/safari_small.png" />
+						</p>
 					</section>
 
+				</section>
+
+				<section>
+					<h2>Market Share</h2>
+					<p><img src="img/browser_market_share.png" height="275" /></p>
+					<ul>
+						<li>IE8, IE9, and Chrome 17+ &gt; 50%</li>
+						<li>+ FF10, IE7 &gt; 75%</li>
+						<li>Safari versions combined = 6.6%</li>
+						<li>Small slices: FF3.6, IE6, FF9</li>
+						<li>Opera included in "other"</li>
+					</ul>
+					<p><br/><small>Source: Adobe SiteCatalyst NetAverages (sadly discontinued)<br/>Updated: March 18, 2012</small></p>
 				</section>
 
 				<section>
@@ -423,12 +559,19 @@ console.assert(false, 'my assertion');</code></pre>
 
 			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
-			
+
 		</div>
-		
+
+
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jquery.prettyPhoto.js"></script>
 		<script src="js/reveal.js"></script>
 		<script src="lib/highlight.js"></script>
 		<script>
+			$(function(){
+				$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking:false, keyboard_shortcuts:false, overlay_gallery:false});
+			});
+
 			// Parse the query string into a key/value object
 			var query = {};
 			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
@@ -460,6 +603,6 @@ console.assert(false, 'my assertion');</code></pre>
 
 			hljs.initHighlightingOnLoad();
 		</script>
-		
+
 	</body>
 </html>
