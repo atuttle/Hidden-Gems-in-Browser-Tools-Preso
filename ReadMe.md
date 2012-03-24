@@ -5,6 +5,8 @@ This repo is a presentation (web-based slide deck) that I prepared for [cf.Objec
 * Uses [Reveal.js](https://github.com/hakimel/reveal.js)
 * Heavily inspired by: http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/
 
+View the slides online at: http://fusiongrokker.com/p/browser_gems/
+
 ## LICENSE
 
 Copyright (c) 2012 Adam Tuttle
