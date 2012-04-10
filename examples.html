@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Examples for "Hidden Gems in Browser Tools"</title>
+	</head>
+	<body>
+		<ul style="line-height: 2em;">
+			<li><a href="javascript:console.log('foo:', foo);console.info('informational log');console.warn('warning!');console.error('error!');">Log labels</a></a></li>
+			<li>Dealing with Frames: <code>childFrameFoo</code></li>
+			<li>Math! <a href="javascript:console.log('Math.sqrt(1787569)=', Math.sqrt(1787569));"><code>console.log('Math.sqrt(1787569)=', Math.sqrt(1787569));</code></a>
+		</ul>
+
+		<iframe width="0" height="0" src="framepage.html" style="visibility:hidden"></iframe>
+
+		<script type="text/javascript">
+			var foo = {
+				snafu: 42,
+				fubar: "you know it is!"
+			};
+
+			function doFoo(){
+				var j = 50;
+				for (var i=0; i < 1000; i++) {
+					if (i % 2 === 0){
+						//even
+						j = j+2;
+					} else {
+						j = j+1;
+					}
+				}
+
+			}
+		</script>
+	</body>
+</html>
