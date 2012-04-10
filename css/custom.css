@@ -2,3 +2,15 @@
 	list-style: none !important;
 	padding-left: 0 !important;
 }
+
+html, body {
+	font-family: 'Imprima' !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+}
+
+#reveal .controls .left {
+	top: 20px;
+	right: 73px;
+	font-size: 42px;
+}
