@@ -78,10 +78,11 @@
 				<section>
 					<h2>We've both come a long way since 1995</h2>
 					<ul>
-						<li><a href="http://www.badassjs.com">BadassJS.com</a> - news site following its namesake</li>
-						<li><a href="http://www.js1k.com">js1k.com</a> - badassery in &lt;= 1K of JS code</li>
-						<li>Insane bookmarklets! (<a href="http://kathack.com/">Katamari</a>) (<a href="http://erkie.github.com/">Asteroids!</a>)</li>
-						<li><a href="http://mrdoob.com/projects/chromeexperiments/google_gravity/">Google Gravity</a></li>
+						<li><a href="http://www.badassjs.com" target="_blank">BadassJS.com</a> - news site following its namesake</li>
+						<li><a href="http://www.js1k.com" target="_blank">js1k.com</a> - badassery in &lt;= 1K of JS code</li>
+						<li>Insane bookmarklets! (<a href="http://kathack.com/" target="_blank">Katamari</a>) (<a href="http://erkie.github.com/">Asteroids!</a>)</li>
+						<li><a href="http://mrdoob.com/projects/chromeexperiments/google_gravity/" target="_blank">Google Gravity</a></li>
+						<li><a href="http://gamecenter.grantgalitz.org/" target="_blank">GameBoy Color in JS + HTML5</a></li>
 						<li>GMail, Facebook, Twitter, Google+, Outlook Web, ...</li>
 						<li>ChromeOS is just a web browser</li>
 					</ul>
@@ -191,6 +192,42 @@ console.assert(false, 'my assertion');</code></pre>
 				</section>
 
 				<section>
+					<h2><small>Console &raquo;</small><br/>Simple Timing</h2>
+					<pre><code contenteditable>console.time('myTimer');
+for (var i=0; i<100; i++){ console.log(i); }
+console.timeEnd('myTimer');</code></pre>
+					<p class="compat_icons">
+						<img src="assets/images/chrome_small.png" />
+						<img src="assets/images/firefox_small.png" />
+						<img src="assets/images/safari_small.png" />
+						<img src="assets/images/opera_small.png" />
+					</p>
+				</section>
+
+				<section>
+					<h2><small>Console &raquo;</small><br/>Bling Bling!</h2>
+					<p>Similar to jQuery DOM selection, but without jQuery.</p>
+					<pre><code contenteditable>$$('li');</code></pre>
+					<p class="compat_icons">
+						<img src="assets/images/chrome_small.png" />
+						<img src="assets/images/firefox_small.png" />
+						<img src="assets/images/safari_small.png" />
+						<img src="assets/images/opera_small.png" />
+					</p>
+				</section>
+
+				<section>
+					<h2><small>Console &raquo;</small><br/>Inspect</h2>
+					<p>Jump to DOM node in Elements panel from console</p>
+					<pre><code contenteditable>inspect( $$('li')[0] );</code></pre>
+					<p class="compat_icons">
+						<img src="assets/images/chrome_small.png" />
+						<img src="assets/images/firefox_small.png" />
+						<img src="assets/images/safari_small.png" />
+					</p>
+				</section>
+
+				<section>
 					<h2><small>Console &raquo;</small><br/> KB Shortcuts</h2>
 					<br/>
 					<p><kbd>&#11014;</kbd> + <kbd>&#11015;</kbd> arrow keys scroll through command history</p>
@@ -202,6 +239,7 @@ console.assert(false, 'my assertion');</code></pre>
 						<img src="assets/images/opera_small.png" />
 						<img src="assets/images/ie9_small.png" />
 					</p>
+					<p><br/></p>
 				</section>
 
 				<section>
@@ -273,7 +311,7 @@ console.assert(false, 'my assertion');</code></pre>
 				<section>
 					<h2><small>Scripts &raquo;</small><br/> Step Debugger</h2>
 					<ul>
-						<li>Breakpoints
+						<li>Line Breakpoints
 							<p class="compat_icons">
 								<img src="assets/images/chrome_small.png" />
 								<img src="assets/images/firefox_small.png" />
@@ -298,7 +336,9 @@ console.assert(false, 'my assertion');</code></pre>
 							</p>
 						</li>
 						<li>Break on XHR url match
-							<p class="compat_icons">Chrome, Safari?, ???</p>
+							<p class="compat_icons">
+								<img src="assets/images/chrome_small.png" />
+							</p>
 						</li>
 					</ul>
 				</section>
@@ -576,6 +616,7 @@ console.assert(false, 'my assertion');</code></pre>
 						<img src="assets/images/opera_small.png" />
 						<img src="assets/images/ie9_small.png" />
 					</p>
+					<p>Increase Dev tools font size: <a href="http://blog.dotsmart.net/2011/09/30/change-font-size-in-chrome-devtools/">Chrome</a>, <a href="http://stackoverflow.com/questions/260008/increase-the-font-size-in-firebug">FireBug</a>.</p>
 					<p><br/></p>
 					<h2>Stupid Chrome Tricks</h2>
 					<p>Dev Tools of the Dev Tools (undocked)</p>
@@ -583,10 +624,12 @@ console.assert(false, 'my assertion');</code></pre>
 
 				<section>
 					<h2>The End</h2>
-					<p>Presentation online at:<br/><a href="http://fusiongrokker.com/p/browser_gems/">fusiongrokker.com/p/browser_gems</a>
-					<p>Inspired by:<br/><a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></p>
+					<p>Slides: <a href="http://fusiongrokker.com/p/browser_gems/">fusiongrokker.com/p/browser_gems/</a>
+					<p>Inspired by: <a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></p>
+					<h3 class="inverted">fusiongrokker.com</h3>
 					<br/>
-					<h3 class="inverted">Adam Tuttle<br/>fusiongrokker.com</h3>
+					<p><strong>Please submit session feedback!</strong></p>
+					<h3 class="inverted">Adam Tuttle<br/>Hidden Gems in Browser Tools</h3>
 				</section>
 
 
