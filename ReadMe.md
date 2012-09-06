@@ -1,11 +1,11 @@
 # Hidden Gems in Browser Tools
 
-This repo is a presentation (web-based slide deck) that I prepared for [cf.Objective 2012](http://www.cfobjective.com/speakers/adam-tuttle/) (May 2012).
+This repo is a presentation (web-based slide deck) that I prepared for [cf.Objective 2012](http://www.cfobjective.com/speakers/adam-tuttle/) (May 2012). It has since been updated and presented again for [NCDevCon 2012](http://ncdevcon.com/) (Sept 2012).
 
-* Uses [Reveal.js](https://github.com/hakimel/reveal.js)
+* Uses [Angular JS](http://angularjs.org/), with thanks to [Elliot Sprehn](http://www.elliottsprehn.com/blog/) for the slide deck skeleton.
 * Heavily inspired by: http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/
 
-View the slides online at: http://fusiongrokker.com/p/browser_gems/
+View the slides online at: http://fusiongrokker.com/p/browser_gems/ (Designed for 1024x768 projector)
 
 ## LICENSE
 
