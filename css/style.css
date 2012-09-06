@@ -125,6 +125,10 @@ slide img.inline {
   margin: 0;
 }
 
+slide img.hidden {
+  visibility: hidden;
+}
+
 slide blockquote {
   font-style: italic;
   margin-left: 2em;
