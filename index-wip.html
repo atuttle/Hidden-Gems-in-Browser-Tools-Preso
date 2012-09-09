@@ -1,0 +1,658 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hidden Gems in Browser Tools</title>
+		<base target="_blank" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Signika+Negative:700' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="assets/shadowbox/shadowbox.css" type="text/css" />
+		<link rel="stylesheet" href="syntaxhighlighter/shThemeDefault.css" type="text/css" />
+	</head>
+	<body ng-app="PresentationModule" ng-controller="PresentationController">
+
+		<div id="intro">
+			<h1>Hidden Gems in<br/>Browser Tools</h1>
+			<h2>Adam Tuttle</h2>
+			<h3 ng-show="isAfter()">
+				@AdamTuttle<br/>
+				adam (at) fusiongrokker.com
+			</h3>
+		</div>
+
+		<p id="counter" ng-show="isInsideDeck()">
+			<a href="#/slides/1">&laquo;</a>
+			{{activeSlide + 1}} / {{totalSlides}}
+			<a href="#/slides/{{totalSlides}}">&raquo;</a>
+		</p>
+
+		<deck current="activeSlide" total="totalSlides">
+
+			<slide>
+				<h2>About Me</h2>
+				<ul>
+					<li>"Work" at CounterMarch Systems, near Philly</li>
+					<li>Manager of <a href="http://www.phillycfug.org">Philly CFUG</a> 2009-Present</li>
+					<li>ColdFusion ACP 2010-Present</li>
+					<li>Blog: <a href="http://fusiongrokker.com">fusiongrokker.com</a></li>
+					<li>Open Source:
+						<ul>
+							<li><a href="http://github.com/atuttle/Taffy">Taffy</a></li>
+							<li><a href="https://github.com/CFCommunity/CFScript-Community-Components">CFScript Community Components</a></li>
+							<li><a href="https://github.com/CFCommunity/ramen">Ramen</a></li>
+							<li>13+ Mango Blog plugins</li>
+						</ul>
+					</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2>Atwood's Law</h2>
+				<blockquote>Any application that can be written in JavaScript, will eventually be written in JavaScript.</blockquote>
+				<p><img src="img/coding-horror-official-logo-small.png" class="inline left" />&ndash;Jeff Atwood, in his 2007 blog post:<br/><a href="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html">The Principle of Least Power</a></p>
+			</slide>
+
+			<slide>
+				<h2>JavaScript? ...Really?!</h2>
+				<p>JS was invented 17 years ago. During that year:</p>
+				<ul>
+					<li>Bill Clinton was POTUS</li>
+					<li><em>"Star Trek: Voyager"</em> debuted</li>
+					<li><em>"Full House"</em> ended</li>
+					<li>...and... ?</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><strong>ColdFusion 1.0 debuted</strong></h2>
+				<img src="img/CF2.jpg" class="inline" />
+				<img src="img/CFDude.jpg" class="inline" />
+			</slide>
+
+			<slide>
+				<h2>Come a long way since 1995</h2>
+				<ul>
+					<li><a href="http://www.badassjs.com" target="_blank">BadassJS.com</a> - news site following its namesake</li>
+					<li><a href="http://www.js1k.com" target="_blank">js1k.com</a> - badassery contest: &lt;= 1K of JS</li>
+					<li>Insane bookmarklets! (<a href="http://kathack.com/" target="_blank">Katamari</a>) (<a href="http://erkie.github.com/">Asteroids!</a>)</li>
+					<li><a href="http://mrdoob.com/projects/chromeexperiments/google_gravity/" target="_blank">Google Gravity</a></li>
+					<li><a href="http://gamecenter.grantgalitz.org/" target="_blank">GameBoy Color in JS + HTML5</a></li>
+					<li>GMail, Facebook, Twitter, Google+, OWA, ...</li>
+					<li>ChromeOS is just a web browser</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2>Then and Now</h2>
+				<img src="img/cell_1995.jpg" class="inline" width="400" />
+				<img src="img/cell_2012.png" class="inline" width="400" />
+			</slide>
+
+			<slide>
+				<h2>We're Living in the Future</h2>
+				<ul>
+					<li>JS is getting more "powerful" (complex)</li>
+					<li>CSS is getting more "powerful" (complex)</li>
+					<li>Desktop apps are moving to the browser</li>
+				</ul>
+				<br/>
+				<p>... But debugging difficulty is related to complexity.</p>
+			</slide>
+
+			<slide>
+				<h2>Alerts Anonymous</h2>
+				<p>Do you debug your JavaScript by adding code like this?</p>
+		        <script type="syntaxhighlighter" slide-code="js">
+					alert(foo);
+				</script>
+				<br/>
+				<p>There's no shame in this... In fact, it resembles:</p>
+				<script type="syntaxhighlighter" slide-code="js">
+					&lt;cfdump var="#foo#" /&gt;
+				</script>
+			</slide>
+
+			<slide>
+				<h2>Tools to the Rescue!</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Developer Tools</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> FireBug (+ Plugins)</li>
+					<li><img src="assets/images/ie9_small.png" class="inline" /> Developer Toolbar</li>
+					<li><img src="assets/images/safari_small.png" class="inline" /> Developer Tools</li>
+					<li><img src="assets/images/opera_small.png" class="inline" /> Dragonfly *</li>
+				</ul>
+				<br/>
+				<p><small>* Not covered here in great detail</small></p>
+			</slide>
+
+			<slide>
+				<h2>Market Share</h2>
+				<p><img src="img/browser_market_share.png" height="275" class="inline right" /></p>
+				<ul>
+					<li>IE8,9, &amp; Chrome 17+ &gt; 50%</li>
+					<li>+ FF10, IE7 &gt; 75%</li>
+					<li>Notable Safari versions combined = 6.6%</li>
+					<li>Small slices: FF3.6, IE6, FF9</li>
+					<li>Opera included in "other"</li>
+				</ul>
+				<p><br/><small><small><small>Source: Adobe SiteCatalyst NetAverages as of March 18, 2012 (sadly discontinued)</small></small></small></p>
+			</slide>
+
+			<slide>
+				<h2>Hidden Gems in Browser Tools</h2>
+				<p>The part that you've all been waiting for...</p>
+				<br/>
+				<p><strong>But first a disclaimer:</strong><br/>Accurate as of <em>Early September 2012</em>.</p>
+			</slide>
+
+			<slide>
+				<h2>Hidden Gems &raquo; Console</h2>
+				<p><strong>Pre-requisite:</strong><br/>Everyone knows about console.log, right?</p>
+				<script type="syntaxhighlighter" slide-code="js">
+					console.log(foo);
+				</script>
+				<p>May you never <code>alert()</code> again!</p>
+				<br/>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+				<img src="assets/images/ie9_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/>Console Everywhere!</h2>
+				<br/>
+				<p>In any dev-tools tab other than the console,<br/>
+					hit <kbd>Esc</kbd> to open a mini-console.</p>
+				<br/>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/> Log Labels!</h2>
+				<code>console.log()</code> takes multiple arguments.<br/>Label your debug output!
+				<script type="syntaxhighlighter" slide-code="js">
+					console.log('foo:', foo);
+					//also handy!
+					console.info('info:', foo);
+					console.warn('warn:', foo);
+					console.error('error:', foo);
+					console.assert(false, 'my assertion');
+				</script>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+				<img src="assets/images/ie9_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/>Simple Timing</h2>
+				<script type="syntaxhighlighter" slide-code="js">
+					console.time('myTimer');
+					for (var i=0; i<100; i++){ console.log(i); }
+					console.timeEnd('myTimer');
+				</script>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/>Bling Bling!</h2>
+				<p>Similar to jQuery DOM selection, but without jQuery.</p>
+				<script type="syntaxhighlighter" slide-code="js">
+					$$('li');
+				</script>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/>Inspect</h2>
+				<p>Jump to DOM node in Elements panel from console</p>
+				<script type="syntaxhighlighter" slide-code="js">
+					inspect( $$('li')[0] ); //show first LI in Elements
+				</script>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/> KB Shortcuts</h2>
+				<br/>
+				<p><kbd>&#11014;</kbd> + <kbd>&#11015;</kbd> arrow keys scroll through command history</p>
+				<br/>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+				<img src="assets/images/ie9_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/> Settings</h2>
+				<p>Persist contents after redirect</p>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Right-click in console
+						<a href="img/chrome_persist_after_redirect.png" rel="shadowbox">&#9114;</a>
+					</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> Button in console toolbar
+						<a href="img/firebug_persist_after_redirect.png" rel="shadowbox">&#9114;</a>
+					</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/> Dealing w/ Frames</h2>
+				<ul class="noDots">
+					<p>The console can only interact with one page. If you've got a frameset or iframe to deal with, it can be a pain.</p>
+					<br/>
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Dropdown
+						<a href="img/chrome_frame_select.png" rel="shadowbox">&#9114;</a>
+					</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> Change console context:</li>
+				</ul>
+				<script type="syntaxhighlighter" slide-code="js">
+					cd(window.frames['frameName']);
+				</script>
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/>Copy to Clipboard</h2>
+				<p>Copy the result of a console command to the clipboard:</p>
+				<script type="syntaxhighlighter" slide-code="js">
+					copy("I'm in ur clipboard, copyin ur text!");
+				</script>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Console &raquo;</small><br/> Math</h2>
+				<p>Just type in your math problem and get the answer:</p>
+				<script type="syntaxhighlighter" slide-code="js">
+					Math.sqrt(1787569);
+				</script>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+				<img src="assets/images/ie9_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2>Hidden Gems &raquo; Scripts</h2>
+				<p>
+					<img src="img/script.jpg" />
+					<small><small><small><a href="http://www.flickr.com/photos/inthehandofdante/3917397900">image credit</a></small></small></small>
+				</p>
+			</slide>
+
+			<slide>
+				<h2><small>Scripts &raquo;</small><br/> Step Debugger</h2>
+				<table>
+					<tr>
+						<td>
+							<img src="assets/images/chrome_small.png" class="inline" />
+							<img src="assets/images/firefox_small.png" class="inline" />
+							<img src="assets/images/safari_small.png" class="inline" />
+							<img src="assets/images/opera_small.png" class="inline" />
+							<img src="assets/images/ie9_small.png" class="inline" />
+						</td>
+						<td>Line Breakpoints</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/images/chrome_small.png" class="inline" />
+							<img src="assets/images/firefox_small.png" class="inline" />
+							<img src="assets/images/safari_small.png" class="inline" />
+							<img src="assets/images/opera_small.png" class="inline" />
+							<img src="assets/images/ie9_small.png" class="inline" />
+						</td>
+						<td>Break on JS Errors</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/images/chrome_small.png" class="inline" />
+							<img src="assets/images/firefox_small.png" class="inline" />
+							<img src="assets/images/safari_small.png" class="inline hidden" />
+							<img src="assets/images/opera_small.png" class="inline hidden" />
+							<img src="assets/images/ie9_small.png" class="inline hidden" />
+						</td>
+						<td>Break on DOM change</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/images/chrome_small.png" class="inline" />
+							<img src="assets/images/firefox_small.png" class="inline" />
+							<img src="assets/images/safari_small.png" class="inline hidden" />
+							<img src="assets/images/opera_small.png" class="inline hidden" />
+							<img src="assets/images/ie9_small.png" class="inline hidden" />
+						</td>
+						<td>
+							Break on XHR url match 
+							(C:<a href="img/chrome_xhr_breakpoint.png" rel="shadowbox">&#9114;</a>, 
+							F:<a href="img/firebug_xhr_breakpoint.png" rel="shadowbox">&#9114;</a>) 
+						</td>
+					</tr>
+				</table>
+			</slide>
+
+			<slide>
+				<h2><small>Scripts &raquo;</small><br/> Step Debugger</h2>
+				<p><em>Almost</em> Universal Keyboard Shortcuts:</p>
+				<ul>
+					<li><kbd>F8</kbd> Pause/Continue ("Run") - Except IE: <kbd>F5</kbd></li>
+					<li><kbd>F10</kbd> Step Over</li>
+					<li><kbd>F11</kbd> Step Into</li>
+				</ul>
+				<br/>
+				<p><img src="assets/images/chrome_small.png" class="inline" />&#63743;: <kbd>&#8984;</kbd><kbd>/</kbd>, <kbd>&#8984;</kbd><kbd>'</kbd>, <kbd>&#8984;</kbd><kbd>;</kbd> respectively</p>
+			</slide>
+
+			<slide>
+				<h2><small>Scripts &raquo;</small><br/> Variable "Watches"</h2>
+				<p>Auto-updating value list for specified variables. Exactly like variable watches if you ever used VB, VC++, etc.</p>
+				<img src="assets/images/chrome_small.png" class="inline" />
+				<img src="assets/images/firefox_small.png" class="inline" />
+				<img src="assets/images/safari_small.png" class="inline" />
+				<img src="assets/images/opera_small.png" class="inline" />
+				<img src="assets/images/ie9_small.png" class="inline" />
+			</slide>
+
+			<slide>
+				<h2><small>Scripts &raquo;</small><br/> Un-minify</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /><img src="assets/images/safari_small.png" class="inline" /> { } button</li>
+					<li><img src="assets/images/ie9_small.png" class="inline" /> Tools icon &gt; Format JavaScript</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2>Hidden Gems &raquo;<br/>Elements / HTML / Documents</h2>
+				<p>... because apparently we can't even agree on a standard for tab names.</p>
+			</slide>
+
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Element Dimensions</h2>
+				<br/>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> <img src="assets/images/safari_small.png" class="inline" /> Select the element to see its dimensions, or use the magnifying glass icon in bottom toolbar<br/><br/></li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> <img src="assets/images/ie9_small.png" class="inline" /> <img src="assets/images/opera_small.png" class="inline" /> Layout tab or list of computed styles</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Expand HTML</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/firefox_small.png" class="inline" /> <kbd>&nbsp;* </kbd> &nbsp;on numpad expands everything but inline scripts & stylesheets. Add shift to include those.<br/><br/></li>
+					<li><img src="assets/images/opera_small.png" class="inline" /> Button on documents tab</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Real Time Editing</h2>
+				<p>Add, Edit, &amp; Delete HTML &amp; CSS inside the browser</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+					<img src="assets/images/ie9_small.png" class="inline" />
+				</p>
+			</slide>
+
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Increment Numeric Prop Vals</h2>
+				<ul class="noDots">
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" />
+						<img src="assets/images/ie9_small.png" class="inline" />
+						<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 1
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						<kbd>Shift</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 10
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						<kbd>Alt</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 0.1
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						<kbd>Shift</kbd>+<kbd>PgUp</kbd>/<kbd>PgDn</kbd> change by 100
+						<br/><br/>
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						Also works on colors
+					</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Element State</h2>
+				<br/>
+				<p>Preview focused, hover, active, visited states</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+				</p>
+				<br/>
+				<p>
+					C:<a href="img/chrome_state_toggle.png" rel="shadowbox">&#9114;</a>,
+					F:<a href="img/firebug_state_toggle.png" rel="shadowbox">&#9114;</a>
+					O:<a href="img/opera_state_toggle.png" rel="shadowbox">&#9114;</a>
+				</p>
+			</slide>
+
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Color definition mode</h2>
+				<table>
+					<tr>
+						<td valign="top">
+							<img src="assets/images/safari_small.png" class="inline" />
+						</td>
+						<td>
+							Clicking color swatches: toggle between hex, short hex, RGB, HSL, named, etc. (Shift+click on Chrome)<br/><br/>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top" nowrap>
+							<img src="assets/images/chrome_small.png" class="inline" />
+							<img src="assets/images/opera_small.png" class="inline" />
+						</td>
+						<td>
+							Clicking the swatch brings up a color selection dialog
+						</td>
+					</tr>
+				</table>
+			</slide>
+
+			<slide>
+				<h2>Hidden Gems &raquo; Resources</h2>
+				<br/>
+				<p>Lists stylesheets, scripts, images, etc used on the page</p>
+				<br/>
+				<p>Firefox & IE don't have a "Resources" tab but some functionality is implemented in other tabs</p>
+			</slide>
+
+<!-- Don't think this slide really adds anything...
+ 			<slide>
+				<h2><small>Resources &raquo;</small><br/> Save changes</h2>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					Right click, Save as
+				</p>
+				<p>
+					<img src="assets/images/safari_small.png" class="inline" />
+					Copy + Paste
+				</p>
+			</slide>
+ -->
+
+			<slide>
+				<h2><small>Resources &raquo;</small><br/> Cookies & Storage</h2>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					Resources tab shows local storage, cookies, caches, etc.
+				<p>
+				<p>
+					<img src="assets/images/opera_small.png" class="inline" />
+					Storage tab does same thing
+				</p>
+			</slide>
+
+			<slide>
+				<h2>Hidden Gems &raquo; Network</h2>
+				<br/>
+				<p>Panel usually must to be open before page loads to work; may require refresh</p>
+			</slide>
+
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Disable cache</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Settings cog</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> Tab menu</li>
+					<li><img src="assets/images/ie9_small.png" class="inline" /> Under "cache" in menu bar</li>
+					<li><img src="assets/images/safari_small.png" class="inline" /> Develop Menu &gt; Disable Cache</li>
+					<li><img src="assets/images/opera_small.png" class="inline" /> Can't disable; only clear</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Clear cache</h2>
+				<p>
+					<kbd>Ctrl</kbd>/<kbd>&#8984;</kbd>+<kbd>Shift</kbd>+<kbd>Del</kbd><br/>
+					Dialog to clear cache & other data
+				</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/ie9_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+				</p>
+			</slide>
+
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Spoof User-Agent</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Settings cog (as of February)</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> User-Agent Switcher (extension)</li>
+				</ul>
+			</slide>
+
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Latency</h2>
+				<p>Displays are all slightly different but all show wait time, download time, etc for each external resource. <a href="img/chrome_latency.png" rel="shadowbox">&#9114;</a></p>
+			</slide>
+
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Events</h2>
+				<ul>
+					<li>DomContentLoaded</li>
+					<li>Load (images, subframes, etc)</li>
+				</ul>
+				<p>
+					<a href="img/chrome_events.png" rel="shadowbox">&#9114;</a>
+				</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+				</p>
+			</slide>
+
+			<slide>
+				<h2>Oh noes, my tools crashed!</h2>
+				<br/>
+				<p>Often, using the keyboard shortcut to toggle them off &amp; on will fix it</p>
+			</slide>
+
+			<slide>
+				<h2>Pop Quiz, Hot Shot!</h2>
+				<p>What was the <strong>only feature</strong> that <img src="assets/images/chrome_small.png" class="inline" /> Chrome does <strong>not</strong> have which some other browsers do?</p>
+			</slide>
+
+			<slide>
+				<h2>Answer</h2>
+				<ul class="noDots">
+					<li>Expand HTML with <kbd>&nbsp;*&nbsp;</kbd></li>
+				</ul>
+				<br/>
+				<p class="fragment">... Chrome is awesome!</p>
+			</slide>
+
+			<slide>
+				<h2>Bonus Tips</h2>
+				<p>Un-dock dev tools</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+					<img src="assets/images/ie9_small.png" class="inline" />
+				</p>
+				<p>Increase Dev tools font size: <a href="http://blog.dotsmart.net/2011/09/30/change-font-size-in-chrome-devtools/">Chrome</a>, 
+					<a href="http://stackoverflow.com/questions/260008/increase-the-font-size-in-firebug">FireBug</a>.</p>
+				<p><br/></p>
+				<h2>Stupid Chrome Tricks</h2>
+				<p>Dev Tools of the Dev Tools (undocked)</p>
+			</slide>
+
+			<slide>
+				<h2>The End</h2>
+				<p>Slides: <a href="http://tinyurl.com/browsergems">tinyurl.com/browsergems</a>
+				<p>
+					Inspired by: <small><a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></small>
+				</p>
+				<br/>
+				<p><strong>Please submit session feedback!</strong></p>
+			</slide>
+
+		</deck>
+
+		<script src="js/jquery-1.7.min.js"></script>
+		<script src="js/angular-1.0.0rc8.min.js"></script>
+		<script src="js/presentation.js"></script>
+		<script src="syntaxhighlighter/shCore.js"></script>
+		<script src="syntaxhighlighter/shBrushJScript.js"></script>
+		<script src="syntaxhighlighter/shBrushXml.js"></script>
+		<script src="assets/shadowbox/shadowbox.js"></script>
+		<script>SyntaxHighlighter.all();</script>
+		<script src="js/examples.js"></script>
+		<script type="text/javascript">
+			Shadowbox.init();
+		</script>
+	</body>
+</html>
