@@ -22,7 +22,7 @@
 			<h1>Hidden Gems in<br/>Browser Tools</h1>
 			<h2>Adam Tuttle</h2>
 			<h3 ng-show="isAfter()">
-				@FusionGrokker<br/>
+				@AdamTuttle<br/>
 				adam (at) fusiongrokker.com
 			</h3>
 		</div>
@@ -98,7 +98,7 @@
 			<slide>
 				<h2>We're Living in the Future</h2>
 				<ul>
-					<li>JavaScript is getting more "powerful" (complex)</li>
+					<li>JS is getting more "powerful" (complex)</li>
 					<li>CSS is getting more "powerful" (complex)</li>
 					<li>Desktop apps are moving to the browser</li>
 				</ul>
@@ -148,6 +148,8 @@
 			<slide>
 				<h2>Hidden Gems in Browser Tools</h2>
 				<p>The part that you've all been waiting for...</p>
+				<br/>
+				<p><strong>But first a disclaimer:</strong><br/>Accurate as of <em>Early September 2012</em>.</p>
 			</slide>
 
 			<slide>
@@ -177,7 +179,7 @@
 
 			<slide>
 				<h2><small>Console &raquo;</small><br/> Log Labels!</h2>
-				<p><code>console.log()</code> takes multiple arguments.<br/>Label your debug output!</p>
+				<code>console.log()</code> takes multiple arguments.<br/>Label your debug output!
 				<script type="syntaxhighlighter" slide-code="js">
 					console.log('foo:', foo);
 					//also handy!
@@ -296,6 +298,7 @@
 			<slide>
 				<h2>Hidden Gems &raquo; Scripts</h2>
 				<p>
+					a.k.a. "Sources" in Chrome
 					<img src="img/script.jpg" />
 					<small><a href="http://www.flickr.com/photos/inthehandofdante/3917397900">image credit</a></small>
 				</p>
@@ -377,264 +380,266 @@
 				</ul>
 			</slide>
 
-<!--
-				<slide>
-					<h2>Hidden Gems &raquo; Elements / HTML / Documents</h2>
-					<br/>
-					<p>... because apparently we can't even agree on a standard for tab names.</p>
-				</slide>
+			<slide>
+				<h2>Hidden Gems &raquo;<br/>Elements / HTML / Documents</h2>
+				<p>... because apparently we can't even agree on a standard for tab names.</p>
+			</slide>
 
-				<slide>
-					<h2><small>HTML &raquo;</small><br/> Element Dimensions</h2>
-					<br/>
-					<ul class="noDots">
-						<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /> <img src="assets/images/safari_small.png" /></span> Select the element to see its dimensions, or use the magnifying glass icon in bottom toolbar<br/><br/></li>
-						<li><span class="compat_icons"> <img src="assets/images/firefox_small.png" /> <img src="assets/images/ie9_small.png" /> <img src="assets/images/opera_small.png" /></span> Layout tab or list of computed styles</li>
-					</ul>
-				</slide>
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Element Dimensions</h2>
+				<br/>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> <img src="assets/images/safari_small.png" class="inline" /> Select the element to see its dimensions, or use the magnifying glass icon in bottom toolbar<br/><br/></li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> <img src="assets/images/ie9_small.png" class="inline" /> <img src="assets/images/opera_small.png" class="inline" /> Layout tab or list of computed styles</li>
+				</ul>
+			</slide>
 
-				<slide>
-					<h2><small>HTML &raquo;</small><br/> Expand HTML</h2>
-					<ul class="noDots">
-						<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> <kbd>&nbsp;* </kbd> &nbsp;on numpad expands everything but inline scripts & stylesheets. Add shift to include those.<br/><br/></li>
-						<li><span class="compat_icons"><img src="assets/images/opera_small.png" /></span> Button on documents tab</li>
-					</ul>
-				</slide>
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Expand HTML</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/firefox_small.png" class="inline" /> <kbd>&nbsp;* </kbd> &nbsp;on numpad expands everything but inline scripts & stylesheets. Add shift to include those.<br/><br/></li>
+					<li><img src="assets/images/opera_small.png" class="inline" /> Button on documents tab</li>
+				</ul>
+			</slide>
 
-				<slide>
-					<h2><small>HTML &raquo;</small><br/> Real Time Editing</h2>
-					<p>Add, Edit, &amp; Delete HTML &amp; CSS inside the browser</p>
-					<p class="compat_icons">
-						<img src="assets/images/chrome_small.png" />
-						<img src="assets/images/firefox_small.png" />
-						<img src="assets/images/safari_small.png" />
-						<img src="assets/images/opera_small.png" />
-						<img src="assets/images/ie9_small.png" />
-					</p>
-				</slide>
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Real Time Editing</h2>
+				<p>Add, Edit, &amp; Delete HTML &amp; CSS inside the browser</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+					<img src="assets/images/ie9_small.png" class="inline" />
+				</p>
+			</slide>
 
-				<slide>
-					<h2><small>HTML &raquo;</small><br/> Incrementing Numeric Prop Vals</h2>
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Increment Numeric Prop Vals</h2>
+				<ul class="noDots">
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" />
+						<img src="assets/images/ie9_small.png" class="inline" />
+						<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 1
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						<kbd>Shift</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 10
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						<kbd>Alt</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 0.1
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						<kbd>Shift</kbd>+<kbd>PgUp</kbd>/<kbd>PgDn</kbd> change by 100
+						<br/><br/>
+					</li>
+					<li>
+						<img src="assets/images/chrome_small.png" class="inline" />
+						<img src="assets/images/firefox_small.png" class="inline" style="visibility:hidden" />
+						<img src="assets/images/safari_small.png" class="inline" />
+						<img src="assets/images/opera_small.png" class="inline" />
+						<img src="assets/images/ie9_small.png" class="inline" style="visibility:hidden" />
+						Also works on colors
+					</li>
+				</ul>
+			</slide>
 
-					<ul class="noDots">
-						<li>
-							<span class="compat_icons">
-								<img src="assets/images/chrome_small.png" />
-								<img src="assets/images/firefox_small.png" />
-								<img src="assets/images/safari_small.png" />
-								<img src="assets/images/opera_small.png" />
-								<img src="assets/images/ie9_small.png" />
-							</span>
-							<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 1
-						</li>
-						<li>
-							<span class="compat_icons">
-								<img src="assets/images/chrome_small.png" />
-								<img src="assets/images/firefox_small.png" />
-								<img src="assets/images/safari_small.png" />
-								<img src="assets/images/opera_small.png" style="visibility:hidden" />
-								<img src="assets/images/ie9_small.png" style="visibility:hidden" />
-							</span>
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Element State</h2>
+				<br/>
+				<p>Preview focused, hover, active, visited states</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+				</p>
+				<br/>
+				<p>
+					Screen Shots:
+					<a href="img/chrome_state_toggle.png" rel="prettyPhoto">chrome</a>,
+					<a href="img/firebug_state_toggle.png" rel="prettyPhoto">firebug</a>
+				</p>
+			</slide>
 
+			<slide>
+				<h2><small>HTML &raquo;</small><br/> Color definition mode</h2>
+				<table>
+					<tr>
+						<td valign="top">
+							<img src="assets/images/safari_small.png" class="inline" />
+						</td>
+						<td>
+							Clicking color swatches: toggle between hex, short hex, RGB, HSL, named, etc. (Shift+click on Chrome)<br/><br/>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top" nowrap>
+							<img src="assets/images/chrome_small.png" class="inline" />
+							<img src="assets/images/opera_small.png" class="inline" />
+						</td>
+						<td>
+							Clicking the swatch brings up a color selection dialog
+						</td>
+					</tr>
+				</table>
+			</slide>
 
-							<kbd>Shift</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 10
-						</li>
-						<li>
-							<span class="compat_icons">
-								<img src="assets/images/chrome_small.png" />
-								<img src="assets/images/firefox_small.png" style="visibility:hidden" />
-								<img src="assets/images/safari_small.png" />
-								<img src="assets/images/opera_small.png" style="visibility:hidden" />
-								<img src="assets/images/ie9_small.png" style="visibility:hidden" />
-							</span>
-							<kbd>Alt</kbd>+<kbd>&#11014;</kbd>/<kbd>&#11015;</kbd> change by 0.1
-						</li>
-						<li>
-							<span class="compat_icons">
-								<img src="assets/images/chrome_small.png" />
-								<img src="assets/images/firefox_small.png" style="visibility:hidden" />
-								<img src="assets/images/safari_small.png" />
-								<img src="assets/images/opera_small.png" style="visibility:hidden" />
-								<img src="assets/images/ie9_small.png" style="visibility:hidden" />
-							</span>
-							<kbd>Shift</kbd>+<kbd>PgUp</kbd>/<kbd>PgDn</kbd> change by 100
-							<br/><br/>
-						</li>
-						<li>
-							<span class="compat_icons">
-								<img src="assets/images/chrome_small.png" />
-								<img src="assets/images/firefox_small.png" style="visibility:hidden" />
-								<img src="assets/images/safari_small.png" />
-								<img src="assets/images/opera_small.png" />
-								<img src="assets/images/ie9_small.png" style="visibility:hidden" />
-							</span>
-							Also works on colors (Bonus!)
-						</li>
-					</ul>
-				</slide>
+			<slide>
+				<h2>Hidden Gems &raquo; Resources</h2>
+				<br/>
+				<p>Lists stylesheets, scripts, images, etc used on the page</p>
+				<br/>
+				<p>Firefox & IE don't have a "Resources" tab but some functionality is implemented in other tabs</p>
+			</slide>
 
-				<slide>
-					<h2><small>HTML &raquo;</small><br/> Element State</h2>
-					<br/>
-					<p>Preview focused, hover, active, visited states</p>
-					<p class="compat_icons">
-						<img src="assets/images/chrome_small.png" />
-						<img src="assets/images/firefox_small.png" />
-						<img src="assets/images/opera_small.png" />
-					</p>
-					<br/>
-					<p>
-						Screen Shots:
-						<a href="img/chrome_state_toggle.png" rel="prettyPhoto">chrome</a>,
-						<a href="img/firebug_state_toggle.png" rel="prettyPhoto">firebug</a>
-					</p>
-				</slide>
+<!-- Don't think this slide really adds anything...
+ 			<slide>
+				<h2><small>Resources &raquo;</small><br/> Save changes</h2>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					Right click, Save as
+				</p>
+				<p>
+					<img src="assets/images/safari_small.png" class="inline" />
+					Copy + Paste
+				</p>
+			</slide>
+ -->
 
-				<slide>
-					<h2><small>HTML &raquo;</small><br/> Color definition mode</h2>
-					<p>
-						<span class="compat_icons">
-							<img src="assets/images/chrome_small.png" />
-							<img src="assets/images/safari_small.png" />
-						</span>
-						Clicking color swatches: toggle between hex, short hex, RGB, HSL, named, etc.
-					</p>
-					<p>
-						<span class="compat_icons">
-							<img src="assets/images/opera_small.png" />
-						</span>
-						This brings up a color selection dialog
-					</p>
-				</slide>
+			<slide>
+				<h2><small>Resources &raquo;</small><br/> Cookies & Storage</h2>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					Resources tab shows local storage, cookies, caches, etc.
+				<p>
+				<p>
+					<img src="assets/images/opera_small.png" class="inline" />
+					Storage tab does same thing
+				</p>
+			</slide>
 
-				<slide>
-					<h2>Hidden Gems &raquo; Resources</h2>
-					<br/>
-					<p>Lists stylesheets, scripts, images, etc used on the page</p>
-					<br/>
-					<p>Firefox & IE don't have a "Resources" tab but some functionality is implemented in other tabs</p>
-				</slide>
+			<slide>
+				<h2>Hidden Gems &raquo; Network</h2>
+				<br/>
+				<p>Panel usually must to be open before page loads to work; may require refresh</p>
+			</slide>
 
-				<slide>
-					<h2><small>Resources &raquo;</small><br/> Save changes</h2>
-					<p>
-						<span class="compat_icons">
-							<img src="assets/images/chrome_small.png" />
-						</span>
-						Right click, Save as
-					</p>
-					<p>
-						<span class="compat_icons">
-							<img src="assets/images/safari_small.png" />
-						</span>
-						Copy + Paste
-					</p>
-				</slide>
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Disable cache</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Settings cog</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> Tab menu</li>
+					<li><img src="assets/images/ie9_small.png" class="inline" /> Under "cache" in menu bar</li>
+					<li><img src="assets/images/safari_small.png" class="inline" /> Develop Menu &gt; Disable Cache</li>
+					<li><img src="assets/images/opera_small.png" class="inline" /> Can't disable; only clear</li>
+				</ul>
+			</slide>
 
-				<slide>
-					<h2><small>Resources &raquo;</small><br/> Cookies & Storage</h2>
-					<p>
-						<span class="compat_icons">
-							<img src="assets/images/chrome_small.png" />
-						</span>
-						Resources tab shows local storage, cookies, caches, etc.
-					<p>
-					<p>
-						<span class="compat_icons">
-							<img src="assets/images/opera_small.png" />
-						</span>
-						Storage tab does same thing
-					</p>
-				</slide>
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Clear cache</h2>
+				<p>
+					<kbd>Ctrl</kbd>/<kbd>&#8984;</kbd>+<kbd>Shift</kbd>+<kbd>Del</kbd><br/>
+					Dialog to clear cache & other data
+				</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/ie9_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+				</p>
+			</slide>
 
-				<slide>
-					<h2>Hidden Gems &raquo; Network</h2>
-					<br/>
-					<p>Usually needs to be open to work; may require refresh to populate</p>
-				</slide>
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Spoof User-Agent</h2>
+				<ul class="noDots">
+					<li><img src="assets/images/chrome_small.png" class="inline" /> Settings cog (as of February)</li>
+					<li><img src="assets/images/firefox_small.png" class="inline" /> User-Agent Switcher (extension)</li>
+				</ul>
+			</slide>
 
-				<slide>
-					<h2><small>Network &raquo;</small><br/> Disable cache</h2>
-					<ul class="noDots">
-						<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Settings cog</li>
-						<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> Tab menu</li>
-						<li><span class="compat_icons"><img src="assets/images/ie9_small.png" /></span> Under "cache" in menu bar</li>
-						<li><span class="compat_icons"><img src="assets/images/safari_small.png" /></span> Develop Menu &gt; Disable Cache</li>
-						<li><span class="compat_icons"><img src="assets/images/opera_small.png" /></span> Can't disable; only clear</li>
-					</ul>
-					<br/><br/>
-					<p>All: <kbd>Ctrl</kbd>/<kbd>&#8984;</kbd>+<kbd>Shift</kbd>+<kbd>Del</kbd> Clear cache (& other data) dialog</p>
-				</slide>
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Latency</h2>
+				<p>Displays are all slightly different but all show wait time, download time, etc for each external resource</p>
+				<p>{todo: screenshot of my blog}</p>
+			</slide>
 
-				<slide>
-					<h2><small>Network &raquo;</small><br/> Spoof User-Agent</h2>
-					<ul class="noDots">
-						<li><span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Settings cog (as of February)</li>
-						<li><span class="compat_icons"><img src="assets/images/firefox_small.png" /></span> User-Agent Switcher (extension)</li>
-					</ul>
-				</slide>
+			<slide>
+				<h2><small>Network &raquo;</small><br/> Events</h2>
+				<ul>
+					<li>DomContentLoaded</li>
+					<li>Load (images, subframes, etc)</li>
+				</ul>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+				</p>
+			</slide>
 
-				<slide>
-					<h2><small>Network &raquo;</small><br/> Latency</h2>
-					<p>Displays are all slightly different but all show wait time, download time, etc for each external resource</p>
-				</slide>
+			<slide>
+				<h2>Oh noes, my tools crashed!</h2>
+				<br/>
+				<p>Often, using the keyboard shortcut to toggle them off &amp; on will fix it</p>
+			</slide>
 
-				<slide>
-					<h2><small>Network &raquo;</small><br/> Events</h2>
-					<ul>
-						<li>DomContentLoaded</li>
-						<li>Load (images, subframes, etc)</li>
-					</ul>
-					<p class="compat_icons">
-						<img src="assets/images/chrome_small.png" />
-						<img src="assets/images/safari_small.png" />
-					</p>
-				</slide>
+			<slide>
+				<h2>Pop Quiz, Hot Shot!</h2>
+				<p>What was the one slide/feature that <img src="assets/images/chrome_small.png" class="inline" /> Chrome does <strong>not</strong> have which some others do?</p>
+			</slide>
 
-				<slide>
-					<h2>Oh noes, my tools crashed!</h2>
-					<br/>
-					<p>Often, using the keyboard shortcut to toggle them<br/>off & on will fix it</p>
-				</slide>
+			<slide>
+				<h2>Answer</h2>
+				<ul class="noDots">
+					<li>Expand HTML with <kbd>&nbsp;*&nbsp;</kbd></li>
+				</ul>
+				<br/>
+				<p class="fragment">... Chrome is awesome!</p>
+			</slide>
 
-				<slide>
-					<h2>Pop Quiz, Hot Shot!</h2>
-					<p>What was the one slide/feature that <span class="compat_icons"><img src="assets/images/chrome_small.png" /></span> Chrome was <strong>not</strong> on when others were?</p>
-					<br/>
-					<ul class="noDots">
-						<li class="fragment"><h3 class="inverted">Answer: Expand HTML</h3></li>
-					</ul>
-					<br/>
-					<p class="fragment">... Chrome is awesome!</p>
-				</slide>
+			<slide>
+				<h2>Bonus Tips</h2>
+				<p>Un-dock dev tools</p>
+				<p>
+					<img src="assets/images/chrome_small.png" class="inline" />
+					<img src="assets/images/firefox_small.png" class="inline" />
+					<img src="assets/images/safari_small.png" class="inline" />
+					<img src="assets/images/opera_small.png" class="inline" />
+					<img src="assets/images/ie9_small.png" class="inline" />
+				</p>
+				<p>Increase Dev tools font size: <a href="http://blog.dotsmart.net/2011/09/30/change-font-size-in-chrome-devtools/">Chrome</a>, 
+					<a href="http://stackoverflow.com/questions/260008/increase-the-font-size-in-firebug">FireBug</a>.</p>
+				<p><br/></p>
+				<h2>Stupid Chrome Tricks</h2>
+				<p>Dev Tools of the Dev Tools (undocked)</p>
+			</slide>
 
-				<slide>
-					<h2>Bonus Tips</h2>
-					<p>Un-dock dev tools</p>
-					<p class="compat_icons">
-						<img src="assets/images/chrome_small.png" />
-						<img src="assets/images/firefox_small.png" />
-						<img src="assets/images/safari_small.png" />
-						<img src="assets/images/opera_small.png" />
-						<img src="assets/images/ie9_small.png" />
-					</p>
-					<p>Increase Dev tools font size: <a href="http://blog.dotsmart.net/2011/09/30/change-font-size-in-chrome-devtools/">Chrome</a>, <a href="http://stackoverflow.com/questions/260008/increase-the-font-size-in-firebug">FireBug</a>.</p>
-					<p><br/></p>
-					<h2>Stupid Chrome Tricks</h2>
-					<p>Dev Tools of the Dev Tools (undocked)</p>
-				</slide>
-
-				<slide>
-					<h2>The End</h2>
-					<p>Slides: <a href="http://fusiongrokker.com/p/browser_gems/">fusiongrokker.com/p/browser_gems/</a>
-					<p>Inspired by: <a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></p>
-					<h3 class="inverted">fusiongrokker.com</h3>
-					<br/>
-					<p><strong>Please submit session feedback!</strong></p>
-					<h3 class="inverted">Adam Tuttle<br/>Hidden Gems in Browser Tools</h3>
-				</slide>
--->
-
+			<slide>
+				<h2>The End</h2>
+				<p>Slides: <a href="http://tinyurl.com/browsergems">tinyurl.com/browsergems</a>
+				<p>
+					Inspired by: <br/>
+					<small><a href="http://www.andismith.com/blog/2011/11/25-dev-tool-secrets/">25 Secrets of the Browser Developer Tools</a></small>
+				</p>
+				<br/>
+				<p><strong>Please submit session feedback!</strong></p>
+			</slide>
 
 		</deck>
 	</body>
