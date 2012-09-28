@@ -84,11 +84,15 @@ slide {
 }
 
 /*
-slide p,
-slide li {
+slide p, slide li 
+{
   white-space: pre-line;
 }
 */
+
+p {
+  line-height: 140%;
+}
 
 slide li {
   margin: 0;
@@ -124,6 +128,7 @@ img.right.right {
 slide img.inline {
   display: inline-block;
   margin: 0;
+  vertical-align: middle;
 }
 
 slide img.hidden {
@@ -225,4 +230,8 @@ kbd {
 
 a[rel=shadowbox] {
   text-decoration: none;
+}
+
+code {
+  color: green;
 }
